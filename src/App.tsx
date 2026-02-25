@@ -10,14 +10,15 @@ function App() {
         name: "Bob",
         email: "bobby@gmail.com",
         role: "admin",
-        avatarUrl: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F012%2F749%2F491%2Foriginal%2Fsurprised-pikachu-meme-icon-free-vector.jpg&sp=1770664084T95010a48497b490cd4473cd8683ed2907ba24507b48faff2ace6e148f5f0cbd6"
+        avatarUrl: "https://upload.wikimedia.org/wiktionary/en/a/a5/Shocked_Pikachu.png"
     };
 
-    const x = (uid: string) =>{
+    const printUID = (uid: string) =>{
       console.log(uid);
     }
-
-  return (
+    printUID(tempUser.id);
+  
+    return (
     <>
       <AlertBox type='success' message='Hello World'>
         Testing
