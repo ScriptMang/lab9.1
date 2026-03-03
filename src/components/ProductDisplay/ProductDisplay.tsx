@@ -9,7 +9,7 @@ function ProductDisplay({product, showDescription, showStockStatus, onAddToCart,
          <p>Name: {product.name}</p>
          <p>Price: {product.price}</p>
          { showDescription ? <p>{product.description}</p> : showDescription }
-         { product.imageUrl ? <img src={product.imageUrl} /> : product.imageUrl}
+         { product.imageUrl ? <img src={product.imageUrl} style={{height: "300px", width: "300px"}} /> : product.imageUrl}
          { showStockStatus ?  <p>Product is in stock</p> : showStockStatus}
         {children}
         </>
