@@ -21,13 +21,14 @@ function App() {
         description: "Great headphones",
         imageUrl: "https://i5.walmartimages.com/asr/623db424-06f8-4a6f-a715-f3812ee51eb5.321c1bcac78d110eaf287c1474255411.jpeg", 
         inStock: true
-      }
+    }
 
     const printUID = (uid: string) =>{
       console.log(uid);
     }
     printUID(tempUser.id);
-  
+    
+
     return (
     <>
       <AlertBox type='success' message='Hello World'>
@@ -37,9 +38,7 @@ function App() {
           Testing123
       </AlertBox>
 
-      <UserProfileCard user={tempUser} showEmail={true}>
-        Card1
-      </UserProfileCard>
+      <UserProfileCard user={tempUser} showEmail={true} showRole={true} onEdit={userId => alert(`Editing user ${userId}`)} />
       <hr />
       <ProductDisplay product={tempProduct}>
         please buy

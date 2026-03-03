@@ -1,7 +1,6 @@
 import type { UserProfileCardProps } from '../../types'
 
 function UserProfileCard({user, showEmail,showRole, onEdit,children}: UserProfileCardProps) {
- onEdit ? onEdit("Hello") : console.log("no funct");
     return (
         <>
          <h1>Title</h1>
@@ -10,6 +9,8 @@ function UserProfileCard({user, showEmail,showRole, onEdit,children}: UserProfil
          {showEmail ? <p>{user.email}</p> :  showEmail}
          {showRole ? <p>{user.role}</p> :  showRole}
          <img src={user.avatarUrl}/>
+         <button onClick={() => onEdit ? onEdit(user.id) : null} 
+          style={{backgroundColor: "blue", color: "white"}}>edit</button>
         {children}
         </>
     )
