@@ -1,6 +1,9 @@
 #profileCard{
     display:flex;
-    flex-direction: column;   
+    flex-direction: column;
+    border: solid black 1px;   
+    width: 300px;
+    margin-left: 20px;
 }
 
 #profileContainer {
