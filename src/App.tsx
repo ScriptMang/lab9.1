@@ -23,11 +23,8 @@ function App() {
         inStock: true
     }
 
-    const printUID = (uid: string) =>{
-      console.log(uid);
-    }
-    printUID(tempUser.id);
-    
+
+//   onAddToCart?: (productId: string) => void;
 
     return (
     <>
@@ -40,9 +37,7 @@ function App() {
 
       <UserProfileCard user={tempUser} showEmail={true} showRole={true} onEdit={userId => alert(`Editing user ${userId}`)} />
       <hr />
-      <ProductDisplay product={tempProduct}>
-        please buy
-      </ProductDisplay>
+      <ProductDisplay product={tempProduct} showDescription={true} showStockStatus={true} />
     </>
   )
 }
