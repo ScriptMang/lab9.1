@@ -8,8 +8,8 @@ function App() {
 
    const tempUser:User = {
         id:"1",
-        name: "Bob",
-        email: "bobby@gmail.com",
+        name: "John Pika",
+        email: "john@gmail.com",
         role: "admin",
         avatarUrl: "https://upload.wikimedia.org/wiktionary/en/a/a5/Shocked_Pikachu.png"
     };
