@@ -4,11 +4,14 @@ function ProductDisplay({product, showDescription, showStockStatus, onAddToCart}
  onAddToCart ? onAddToCart("Item added to cart") : console.log("no funct");
     return (
         <div id="productCard">
-         <div id="productName">{product.name}</div>
-         <div id="productPrice">${product.price}</div>
-         { showDescription ? <p>{product.description}</p> : showDescription }
-         { product.imageUrl ? <img src={product.imageUrl} id="productImg" style={{height: "300px", width: "300px"}} /> : product.imageUrl}
-         { showStockStatus ?  <p id="itemInStock">Product is in stock</p> : showStockStatus}
+            { product.imageUrl ? <img src={product.imageUrl} id="productImg" style={{height: "300px", width: "300px"}} /> : product.imageUrl}
+            <div id="productDetails">
+                <div id="productName">{product.name}</div>
+                <div id="productPrice">${product.price}</div>
+                { showDescription ? <p>{product.description}</p> : showDescription }
+                { showStockStatus ?  <p id="itemInStock">Product is in stock</p> : showStockStatus}
+            </div>
+            <button id="addToCartButton">Add to Cart</button>
         </div>
     )
 }
