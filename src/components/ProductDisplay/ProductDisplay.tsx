@@ -1,7 +1,6 @@
 import type { ProductDisplayProps } from '../../types'
 
 function ProductDisplay({product, showDescription, showStockStatus, onAddToCart}: ProductDisplayProps) {
- onAddToCart ? onAddToCart("Item added to cart") : console.log("no funct");
     return (
         <div id="productCard">
             { product.imageUrl ? <img src={product.imageUrl} id="productImg" style={{height: "300px", width: "300px"}} /> : product.imageUrl}
@@ -11,7 +10,7 @@ function ProductDisplay({product, showDescription, showStockStatus, onAddToCart}
                 { showDescription ? <p>{product.description}</p> : showDescription }
                 { showStockStatus ?  <p id="itemInStock">Product is in stock</p> : showStockStatus}
             </div>
-            <button id="addToCartButton">Add to Cart</button>
+            <button onClick={() => onAddToCart ? onAddToCart(product.id) : null} id="addToCartButton">Add to Cart</button>
         </div>
     )
 }

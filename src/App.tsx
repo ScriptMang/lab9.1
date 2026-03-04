@@ -15,7 +15,7 @@ function App() {
     };
 
     const tempProduct: Product = {
-        id: "2",
+        id: "1",
         name: "wireless bluetooth headphones",
         price: 55.00,
         description: "Great headphones",
@@ -37,7 +37,7 @@ function App() {
 
       <UserProfileCard user={tempUser} showEmail={true} showRole={true} onEdit={userId => alert(`Editing user ${userId}`)} />
       <hr />
-      <ProductDisplay product={tempProduct} showDescription={true} showStockStatus={true} />
+      <ProductDisplay product={tempProduct} showDescription={true} showStockStatus={true} onAddToCart={productId => alert(`Add product ${productId}`)} />
     </>
   )
 }
