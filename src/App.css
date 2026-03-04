@@ -1,23 +1,33 @@
+#profileCard{
+    display:flex;
+    flex-direction: column;   
+}
+
 #profileContainer {
-display: flex;
-gap: 50px;
-justify-content: space-between;
-width: 300px;
-margin-bottom: 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 30px;    
 }
 
 #profileInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 30px;
 }
 
 #userImg {
     width:  60px;
     height: 80px;
+    margin-left: 20px;
+    border-radius: 10px;
 }
 
 #editProfileButton {
-    width: 280px;
-    height: 30px;
+    width: 250px;
+    height: 35px;
+    margin-left: 20px;
 }
