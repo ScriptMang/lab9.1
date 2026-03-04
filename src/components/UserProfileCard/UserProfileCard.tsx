@@ -13,7 +13,7 @@ function UserProfileCard({user, showEmail,showRole, onEdit,children}: UserProfil
          </div>
          
          <button onClick={() => onEdit ? onEdit(user.id) : null} 
-          style={{backgroundColor: "blue", color: "white"}}>Edit Profile</button>
+          style={{backgroundColor: "blue", color: "white"}} id="editProfileButton">Edit Profile</button>
         {children}
         </div>
     )
